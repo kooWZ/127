@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/KSHMR_Game_FX_02_Alarm_D#.wav-fdad753b8549204496f2113de1e2bae8.sample"
+
+[deps]
+
+source_file="res://Asset/music/KSHMR_Game_FX_02_Alarm_D#.wav"
+dest_files=[ "res://.import/KSHMR_Game_FX_02_Alarm_D#.wav-fdad753b8549204496f2113de1e2bae8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

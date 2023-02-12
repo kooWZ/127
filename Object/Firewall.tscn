@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Object/FlagSwitch.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Object/Firewall.gd" type="Script" id=2]
+[ext_resource path="res://Object/Interactable.gd" type="Script" id=3]
+
+[node name="Firewall" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+flag = "firewall"
+
+[node name="Beforeflag" type="Sprite" parent="." index="0"]
+
+[node name="Interactable" type="Area2D" parent="Beforeflag" index="0"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beforeflag/Interactable" index="0"]
+
+[node name="Afterflag" type="Sprite" parent="." index="1"]
+
+[connection signal="interact" from="Beforeflag/Interactable" to="." method="_on_Interactable_interact"]

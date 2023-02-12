@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Enemy/Spawner.gd" type="Script" id=1]
+
+[node name="Spawner" type="Position2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_gizmo_extents_": 176.7
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Position2D1" type="Position2D" parent="."]
+
+[node name="Position2D2" type="Position2D" parent="."]
+
+[node name="Position2D3" type="Position2D" parent="."]
+
+[node name="Position2D4" type="Position2D" parent="."]
+
+[node name="Position2D5" type="Position2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

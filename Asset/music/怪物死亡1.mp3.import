@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/怪物死亡1.mp3-1fb4a5f2d247e06c6ee847df72194cfd.mp3str"
+
+[deps]
+
+source_file="res://Asset/music/怪物死亡1.mp3"
+dest_files=[ "res://.import/怪物死亡1.mp3-1fb4a5f2d247e06c6ee847df72194cfd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

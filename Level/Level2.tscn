@@ -1,0 +1,171 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Level/Level2.gd" type="Script" id=2]
+[ext_resource path="res://Asset/music/bgm/bgm1(1).mp3" type="AudioStream" id=3]
+[ext_resource path="res://Font/UNIFONT.tres" type="DynamicFont" id=4]
+[ext_resource path="res://UI/Main/弹出.png" type="Texture" id=5]
+[ext_resource path="res://UI/Main/mainload 1.png" type="Texture" id=6]
+[ext_resource path="res://UI/Main/mainload 3.png" type="Texture" id=7]
+[ext_resource path="res://UI/Main/MainWindow.png" type="Texture" id=8]
+[ext_resource path="res://UI/Main/mainload 2.png" type="Texture" id=9]
+[ext_resource path="res://World/w02.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/SettingsHUD.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI/DialogHUD.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/Desktop.tscn" type="PackedScene" id=13]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Desktop" parent="CanvasLayer" instance=ExtResource( 13 )]
+margin_right = 800.0
+margin_bottom = 640.0
+rect_pivot_offset = Vector2( -432, 312 )
+
+[node name="DialogHUD" parent="CanvasLayer" instance=ExtResource( 12 )]
+margin_left = 32.0
+margin_top = 112.0
+margin_right = 32.0
+margin_bottom = 112.0
+rect_scale = Vector2( 1.38427, 1.38427 )
+mouse_filter = 1
+
+[node name="SettingsHUD" parent="CanvasLayer" instance=ExtResource( 11 )]
+margin_left = 1520.0
+margin_top = 72.0
+margin_right = 1856.0
+margin_bottom = 608.0
+
+[node name="MinimapViewContainer" parent="CanvasLayer/SettingsHUD" index="2"]
+visible = true
+
+[node name="MinimapViewport" parent="CanvasLayer/SettingsHUD/MinimapViewContainer" index="0"]
+size = Vector2( 100, 100 )
+render_target_update_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer/SettingsHUD/MinimapViewContainer/MinimapViewport" index="0"]
+position = Vector2( 544, 88 )
+current = true
+zoom = Vector2( 25, 25 )
+
+[node name="Main" type="Control" parent="CanvasLayer"]
+margin_left = 16.0
+margin_top = -40.0
+margin_right = 56.0
+
+[node name="Window" type="TextureRect" parent="CanvasLayer/Main"]
+margin_left = 512.0
+margin_top = 80.0
+margin_right = 1494.0
+margin_bottom = 1040.0
+mouse_filter = 0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="GameViewContainer" type="ViewportContainer" parent="CanvasLayer/Main"]
+margin_left = 544.0
+margin_top = 112.0
+margin_right = 1480.0
+margin_bottom = 1024.0
+stretch = true
+
+[node name="GameViewport" type="Viewport" parent="CanvasLayer/Main/GameViewContainer"]
+size = Vector2( 936, 912 )
+own_world = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="BabyWorld" parent="CanvasLayer/Main/GameViewContainer/GameViewport" instance=ExtResource( 10 )]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="CanvasLayer/Main/GameViewContainer/GameViewport/BabyWorld/Player" index="10"]
+remote_path = NodePath("../../../../../../SettingsHUD/MinimapViewContainer/MinimapViewport/Camera2D")
+
+[node name="Load1" type="TextureRect" parent="CanvasLayer/Main"]
+visible = false
+margin_left = 456.0
+margin_top = 176.0
+margin_right = 1535.0
+margin_bottom = 896.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Load2" type="TextureRect" parent="CanvasLayer/Main"]
+visible = false
+margin_left = 544.0
+margin_top = 112.0
+margin_right = 1480.0
+margin_bottom = 1024.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Load3" type="TextureRect" parent="CanvasLayer/Main"]
+visible = false
+margin_left = 544.0
+margin_top = 112.0
+margin_right = 1480.0
+margin_bottom = 1024.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="pop" type="Control" parent="CanvasLayer"]
+visible = false
+margin_left = 656.0
+margin_top = 428.0
+margin_right = 1068.0
+margin_bottom = 670.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/pop"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 415.0
+margin_bottom = 236.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 2
+
+[node name="label" type="RichTextLabel" parent="CanvasLayer/pop"]
+margin_left = 90.0
+margin_top = 84.0
+margin_right = 330.0
+margin_bottom = 156.0
+custom_fonts/normal_font = ExtResource( 4 )
+
+[node name="No2" type="Button" parent="CanvasLayer/pop"]
+pause_mode = 2
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 374.0
+margin_top = 8.0
+margin_right = 412.0
+margin_bottom = 35.0
+
+[node name="No" type="Button" parent="CanvasLayer/pop"]
+pause_mode = 2
+margin_left = 275.0
+margin_top = 169.0
+margin_right = 336.0
+margin_bottom = 203.0
+custom_fonts/font = ExtResource( 4 )
+text = "忽略"
+
+[node name="Yes" type="Button" parent="CanvasLayer/pop"]
+pause_mode = 2
+margin_left = 82.0
+margin_top = 171.0
+margin_right = 143.0
+margin_bottom = 205.0
+custom_fonts/font = ExtResource( 4 )
+text = "保留"
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="BGM" type="Node" parent="."]
+
+[node name="Audio1" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource( 3 )
+volume_db = -80.0
+autoplay = true
+
+[editable path="CanvasLayer/Desktop"]
+[editable path="CanvasLayer/SettingsHUD"]
+[editable path="CanvasLayer/Main/GameViewContainer/GameViewport/BabyWorld"]

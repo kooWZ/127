@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/开机.mp3-3ee4ec2dddf97475acbbe3772d533d5e.mp3str"
+
+[deps]
+
+source_file="res://Asset/music/bgm/开机.mp3"
+dest_files=[ "res://.import/开机.mp3-3ee4ec2dddf97475acbbe3772d533d5e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

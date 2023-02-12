@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Object/ProgramInterface.gd" type="Script" id=1]
+[ext_resource path="res://Object/FlagSwitch.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Object/Interactable.gd" type="Script" id=3]
+
+[node name="ProgramInterface" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+flag = "program_interface"
+
+[node name="Beforeflag" type="Sprite" parent="." index="0"]
+
+[node name="Interactable" type="Area2D" parent="Beforeflag" index="0"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beforeflag/Interactable" index="0"]
+
+[node name="Afterflag" type="Sprite" parent="." index="1"]
+
+[connection signal="interact" from="Beforeflag/Interactable" to="." method="_on_Interactable_interact"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/DialogHUD.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Level/Level3.gd" type="Script" id=2]
+[ext_resource path="res://UI/Desktop.tscn" type="PackedScene" id=3]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Desktop" parent="CanvasLayer" instance=ExtResource( 3 )]
+modulate = Color( 0, 0, 0, 1 )
+margin_right = 800.0
+margin_bottom = 640.0
+rect_pivot_offset = Vector2( -432, 312 )
+
+[node name="DialogHUD" parent="CanvasLayer" instance=ExtResource( 1 )]
+visible = false
+margin_left = 32.0
+margin_top = 112.0
+margin_right = 32.0
+margin_bottom = 112.0
+rect_scale = Vector2( 1.38427, 1.38427 )
+
+[node name="BGM" type="Node" parent="."]

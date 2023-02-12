@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Item/Item.gd" type="Script" id=1]
+[ext_resource path="res://Asset/127/key.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+in_game_name = "RSA-Key"
+description = "RSA 加密对应的密匙"
+prop_texture = ExtResource( 2 )
+scene_texture = ExtResource( 2 )
+extra_info = "2"

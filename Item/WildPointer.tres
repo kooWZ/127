@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Item/Item.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+in_game_name = "野指针"
+description = "通过注入特定接口可以使一定范围内的防护程序宕机一段时间, 效果堪比 比鞋底还难吃的面包~"
+extra_info = ""

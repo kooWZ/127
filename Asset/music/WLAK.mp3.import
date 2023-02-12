@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WLAK.mp3-be716393677fd71266e64d40a14074ef.mp3str"
+
+[deps]
+
+source_file="res://Asset/music/WLAK.mp3"
+dest_files=[ "res://.import/WLAK.mp3-be716393677fd71266e64d40a14074ef.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

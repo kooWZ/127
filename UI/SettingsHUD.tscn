@@ -1,0 +1,183 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://UI/SettingsHUD/MusicControl.gd" type="Script" id=1]
+[ext_resource path="res://UI/SettingsHUD/Pause.gd" type="Script" id=2]
+[ext_resource path="res://UI/SettingsHUD/MusicOn.png" type="Texture" id=3]
+[ext_resource path="res://UI/SettingsHUD/Pause.png" type="Texture" id=4]
+[ext_resource path="res://UI/SettingsHUD/MusicOff.png" type="Texture" id=5]
+[ext_resource path="res://UI/SettingsHUD/SystemSettings.png" type="Texture" id=6]
+[ext_resource path="res://UI/SettingsHUD/Play.png" type="Texture" id=7]
+[ext_resource path="res://UI/MoveableUI.gd" type="Script" id=8]
+[ext_resource path="res://Font/UNIFONT.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Asset/__#.png" type="Texture" id=10]
+[ext_resource path="res://UI/SettingsHUD/SFXMusicControl.gd" type="Script" id=11]
+[ext_resource path="res://UI/Bag.gd" type="Script" id=12]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 344, 542 )
+margin_left = 16.7822
+margin_right = 21.766
+margin_top = 76.1809
+margin_bottom = 55.5336
+
+[sub_resource type="Theme" id=2]
+Label/styles/normal = SubResource( 1 )
+
+[node name="SettingsHUD" type="Control"]
+margin_right = 344.0
+margin_bottom = 623.0
+rect_scale = Vector2( 1.13648, 1.13648 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Window" type="Label" parent="."]
+margin_right = 344.0
+margin_bottom = 623.0
+theme = SubResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 176.0
+margin_top = 225.0
+margin_right = 176.0
+margin_bottom = 264.0
+
+[node name="MusicControl" type="Control" parent="Control"]
+margin_left = 96.0
+margin_top = 8.0
+margin_right = 136.0
+margin_bottom = 48.0
+
+[node name="Button" type="TextureButton" parent="Control/MusicControl"]
+anchor_left = -3.6
+anchor_top = -4.512
+anchor_right = -3.6
+anchor_bottom = -4.512
+margin_top = 36.48
+margin_right = 64.0
+margin_bottom = 100.48
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="Control/MusicControl"]
+anchor_left = -3.2
+anchor_top = -1.4
+anchor_right = -3.2
+anchor_bottom = -1.4
+margin_left = 8.0
+margin_right = 48.0
+margin_bottom = 16.0
+custom_fonts/font = ExtResource( 9 )
+text = "音乐"
+
+[node name="SFXMusicControl" type="Control" parent="Control"]
+margin_left = 80.0
+margin_top = 8.0
+margin_right = 120.0
+margin_bottom = 48.0
+
+[node name="Button" type="TextureButton" parent="Control/SFXMusicControl"]
+anchor_left = -1.0
+anchor_top = -3.6
+anchor_right = -1.0
+anchor_bottom = -3.6
+margin_right = 64.0
+margin_bottom = 64.0
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="Control/SFXMusicControl"]
+anchor_left = -0.4
+anchor_top = -1.4
+anchor_right = -0.4
+anchor_bottom = -1.4
+margin_right = 40.0
+margin_bottom = 16.0
+custom_fonts/font = ExtResource( 9 )
+text = "音效"
+
+[node name="Pause" type="Control" parent="Control"]
+pause_mode = 2
+margin_left = -192.0
+margin_right = -152.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Control/Pause"]
+pause_mode = 2
+anchor_left = 1.8
+anchor_top = -1.2
+anchor_right = 1.8
+anchor_bottom = -1.2
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 9 )
+text = "暂停"
+
+[node name="Button" type="TextureButton" parent="Control/Pause"]
+pause_mode = 2
+anchor_left = 1.6
+anchor_top = -3.4
+anchor_right = 1.6
+anchor_bottom = -3.4
+margin_top = 4.0
+margin_right = 56.0
+margin_bottom = 60.0
+toggle_mode = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 7 )
+expand = true
+
+[node name="MinimapViewContainer" type="ViewportContainer" parent="."]
+visible = false
+modulate = Color( 0.623529, 0.505882, 0.717647, 1 )
+margin_left = 14.0786
+margin_top = 232.296
+margin_right = 317.079
+margin_bottom = 499.296
+stretch = true
+
+[node name="MinimapViewport" type="Viewport" parent="MinimapViewContainer"]
+size = Vector2( 25, 25 )
+handle_input_locally = false
+hdr = false
+render_target_update_mode = 0
+
+[node name="Bag" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 12 )
+
+[node name="Count" type="RichTextLabel" parent="Bag"]
+margin_left = 136.0
+margin_top = 530.0
+margin_right = 298.0
+margin_bottom = 570.0
+custom_fonts/normal_font = ExtResource( 9 )
+text = "Collected:
+0/10"
+scroll_active = false
+
+[node name="Icon" type="TextureRect" parent="Bag"]
+margin_left = 23.7576
+margin_top = 526.186
+margin_right = 94.7576
+margin_bottom = 571.186
+texture = ExtResource( 10 )
+expand = true
+
+[node name="DragSection" type="Control" parent="."]
+margin_right = 345.0
+margin_bottom = 52.0
+
+[connection signal="toggled" from="Control/MusicControl/Button" to="Control/MusicControl/Button" method="_on_MusicControl_toggled"]
+[connection signal="toggled" from="Control/SFXMusicControl/Button" to="Control/SFXMusicControl/Button" method="_on_FxMusicControl_toggled"]
+[connection signal="toggled" from="Control/Pause/Button" to="Control/Pause" method="_on_Button_toggled"]

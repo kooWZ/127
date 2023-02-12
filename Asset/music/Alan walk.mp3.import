@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Alan walk.mp3-dd2e78d31e9291e795cf102c8ee7f20e.mp3str"
+
+[deps]
+
+source_file="res://Asset/music/Alan walk.mp3"
+dest_files=[ "res://.import/Alan walk.mp3-dd2e78d31e9291e795cf102c8ee7f20e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
