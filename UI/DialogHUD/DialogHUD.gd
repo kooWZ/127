@@ -148,11 +148,3 @@ func _on_NPC_tween_completed(_object, _key):
 		$Tween4Window.start()
 		
 		
-func inside():
-	if $Window1.margin_top==0:
-		if get_global_mouse_position().x >= rect_position.x and get_global_mouse_position().y >= rect_position.y and get_global_mouse_position().x <= rect_position.x+rect_size.x and get_global_mouse_position().y <= rect_position.y+rect_size.y:
-			return true
-		else:
-			return false
-
-		
