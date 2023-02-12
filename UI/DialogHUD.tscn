@@ -59,8 +59,8 @@ mouse_filter = 1
 
 [node name="Window0" type="TextureRect" parent="."]
 margin_top = 332.0
-margin_right = 352.0
-margin_bottom = 607.0
+margin_right = 344.0
+margin_bottom = 603.0
 mouse_filter = 2
 texture = ExtResource( 8 )
 
