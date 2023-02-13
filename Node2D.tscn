@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Box/Hitbox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://TileMap/test1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileMap/2tiles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Patrolman.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemy/Surveillant.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/FragilePlatform.tscn" type="PackedScene" id=5]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Asset/PNG/Tiles/platformPack_tile003.png" type="Texture" id=1]
+[ext_resource path="res://Asset/TemplatePNG/Tiles/platformPack_tile003.png" type="Texture" id=1]
 [ext_resource path="res://Box/Hurtbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/FragilePlatform.gd" type="Script" id=3]
 

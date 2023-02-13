@@ -5,7 +5,7 @@
 [ext_resource path="res://Item/ItemInWorld.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/BabyWorld.gd" type="Script" id=4]
 [ext_resource path="res://Asset/test1.png" type="Texture" id=5]
-[ext_resource path="res://TileMap/test1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://TileMap/2tiles.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Box/Hitbox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/SceneDoor.tscn" type="PackedScene" id=8]
 

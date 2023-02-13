@@ -66,7 +66,7 @@ config/windows_native_icon="res://iconw.ico"
 Global="*res://Global/Global.tscn"
 Flag="*res://Global/Flag.gd"
 Inventory="*res://Global/Inventory.gd"
-global_soil="*res://TileMap/test1.tscn"
+global_soil="*res://TileMap/2tiles.tscn"
 Dialogs="*res://Global/Dialogs.gd"
 
 [debug]
